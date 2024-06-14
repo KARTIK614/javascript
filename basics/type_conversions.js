@@ -11,3 +11,14 @@ console.log(typeof(agr));
  * "some kind of text" = true
  * 
  */
+
+//SOME IMPORTANT OPERATIONS:-
+// -> two primitive summitions for example
+console.log("1"+2);
+console.log(2+"1");
+console.log("1"+2+2);
+console.log("1"+2+"4");
+console.log(1+2+"4")
+//these are the rules defined at the time of development of js.
+//they are dealed in a specific manner which will be discusses in futhter lectures.
+// these type of outputs are given by browser in many cases so you have to know that how to deal with them.
