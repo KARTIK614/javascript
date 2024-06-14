@@ -25,6 +25,7 @@ var b = 30;
 {
     console.log(b);
 }
+    in today's development the var is not used as a primary variable declarer.
  */
 
 const c =90;
@@ -57,5 +58,19 @@ the first letter of the next word should be in capital.
  * typeof(datatype) function is used to get the data type
  * 
  * symbol data type.
+ * 
+ */
+
+// CONSOLE.TABLE([])
+// console.table([a,b,c]);
+/**
+ * this is used to display the data in a tabular format.    
+ */
+
+// if you declare the variable and don't define it then the value of that variable is considered as undefined.
+// null is itself a standslone value in javascript itself.used when the 0 is itself is a marking on the scale.
+// INTERVIES QUESTIONS:- 
+/**
+ * null is considered as a object in js while undefined is considered as a undefined itself in js, this can be considered as flaw in js but can be asked in interview as well.
  * 
  */
