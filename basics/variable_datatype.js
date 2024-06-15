@@ -56,6 +56,8 @@ the first letter of the next word should be in capital.
  * rest is same but 
  * isatead of long here we are using the BigInt 
  * typeof(datatype) function is used to get the data type
+ * they are called by value data types and the non primitive data types are know as call by refrence data types.
+ * 
  * 
  * symbol data type.
  * 
@@ -72,5 +74,6 @@ the first letter of the next word should be in capital.
 // INTERVIES QUESTIONS:- 
 /**
  * null is considered as a object in js while undefined is considered as a undefined itself in js, this can be considered as flaw in js but can be asked in interview as well.
+ * in interviews the typeof the data types are asked as a question in them.
  * 
  */
