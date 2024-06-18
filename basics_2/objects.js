@@ -55,45 +55,31 @@
 
 //+++++++++++++++++++++++++++++++++++++++OBJECT CREATION VIA CONSTRUCTOR++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
 
-const user = new Object();
-user.email= "kartikpareek614@gmail.com";
-  user.lastname= "pareek";
-  user.firstname= "kartik";
+// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//OBJECT DESTRUCTURE AND JSON API INTRO:-
 
-//you can declare an object inside another object also for example
-
-const regularUser  = {
-  email: "kartikpareek614@gmail.com",
-  name:{
-    nickName:"vaibhav",
-    userFullname:{
-      firstName: "kartik",
-      lastName:"pareek"
-    }
-  }
+const course = {
+  courseName: "JS Deep Dive",
+  price: "000",
+  courseInstructor: "Hitesh Choudhary"
 }
-// console.log(regularUser);//for accessing the whole object.
-// console.log(regularUser.name.userFullname.firstName);// to access the lst element in the nested object.
+//if you want to print each value of the integer then you have to use three line with same syntax, which is not considered as good practice in the production, so we are uesing an ew method for it.
+// const {courseInstructor} = course//and if you think that the courseInstructor is a big name then you can shorten it with your usecase.
+const {courseInstructor : teacher} = course
+console.log(teacher);
+
+//this is known as destructuring of the objects, this is widely used in react.js so be prepared for it.
 
 
-//you can merge an object to another objects by following functions:-
-
-// const obj3 = Object.assign({},user, regularUser);//this will arrange the objects in an organised manner and the {}(optional parameter) validates that the result should be in a good manner.
-// the syntaz works as like
-// Object.assign(target,source) -> in the upper array the empty object is works as a target and the user and the regularUser works as a source for the merging of the objects.
-
-// console.log(obj3);
-
-//BUT MOSTLY USED METHOD IS:-
-// const obj3 = {...user, ...regularUser}
-// console.log(obj3);
-
-
-// to get all the keys and values in an object in an array for specific usecases.
-
-console.log(Object.keys(user));
-console.log(Object.values(user));
-//this seems to be very usefull in performing the operation on the keys and values pairs in when we are trying to make the array of both key and values then we can make this by using.
-console.log(Object.entries(user));
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//SOMETHING ABOUT API'S IN JS
+/**
+ * when you call an API then the data comes from an API in json format.
+ * to fetch that data we have to call it and store it in an object.
+ * sometimes the API's give data in the array of an objec then we have to use the previously tought methods to deal with them.
+ * when the API gives you data in json format then you have to study it deeply in some specific format to get its deep understanding form it.
+ * there is a website named as json formator which is used to get a understanding of the data in the different format based on developer's need.
+ * 
+ * in the industry all the data is travellin gin json format weather it is on ruby on rails or js itself.
+ */
