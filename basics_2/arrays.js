@@ -19,3 +19,28 @@ const myArray = new Array(1,2,3,4,5)
  * another thing is it cuts and modifies the array to the remaining values of the array.
  * 
  */
+
+// +++++++++++++++++++++++FURTHER DISCUSSION++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//you can give an array as a another data element inside the new array.
+const aadhaar = ["bagra","marathi","janghuji"];
+const geca = ["karan","saumya","girija","jitendra"];
+
+//if we puch the geca array to the aadhaar then the array(geca) is considerd as an element in it.
+// aadhaar.push(geca);
+// console.log(aadhaar);
+
+//to display the element properly we have to use the concat prototype in it, this gives a new array which has to be stored in the a new array.
+const arr = aadhaar.concat(geca);
+console.log(arr);
+
+//if there is an array which has an array inside another array inside another array then we can use that array.flat to arrange the elements present in the array recursevely.
+
+
+// to convert he string or any other element in to an array we can use the array as.
+console.log(Array.from("thande_papa"));
+
+// if you have the key value pairs and you have to convert it to an arary then you have to specifies that first weather you want to convert the keys or the value into the array.
+
+// if you want to convert the elements into an array then you have to use the Array.of(<number of variables>)
+
