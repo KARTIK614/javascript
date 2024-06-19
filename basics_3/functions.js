@@ -38,3 +38,4 @@ function schoolDays(val1, val2, ...num4)
     return val1+val2, num4
 }
 console.log(schoolDays(200,300,499,4,556,6767));
+console.log("thande_papa");
