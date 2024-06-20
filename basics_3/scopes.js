@@ -11,3 +11,21 @@
  * 
  * the scope of the browser is differnt from the scope declared in the node enviroment.
  */
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//IN NESTED FUNCTIONS/LOOPS/CONTROLLERS THE CHILDREN HAS AN ACCESS OF PARENT'S VARIABLES BUT THE PARENT DON'T HAVE THE ACCESS TO THE CHILDREN'S VARIABLES.
+//FOR EXAMPLE
+const username = "kartik pareek";
+function one()
+{
+    function two()
+    {
+        const website = "my_portfolio";
+        console.log(username)
+
+    }
+    two();
+    console.log(website);
+}
+one();
+//when you use the function beefore its declaration then the JS got confused and returns an error in it.
