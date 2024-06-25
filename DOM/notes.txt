@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learnings</title>
+</head>
+<body>
+    <div class="bg-black"></div>
+    <h1 class="heading">DOM manupulation on chai or code</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>DOM:- document object model</p>
+    <p>in it the manupulation of the DOM has to be learned. in it the working of the whole webpage has to be learned in it.<br>
+    In it the things happening on the webpage is studied and after this the events (buttons, processes) everything is understanded by the systems.
+    you have to know about the drawing of DOM in paper or any kind of platform for its better understanding.<br>
+    in it you have to have a basic understanding of how things are working in a proper manner.
+    example of a proper DOM is as follows
+    <window->
+        <Document->
+            <HTML->
+                <head></head>//further attributes and text nodes
+                <body></body>//further attributes and text nodes
+                //you can get many information by it for example 
+                console.log(Document.baseURI);//gives you the url of the website you are watching.
+                HTML collection, node collections, arrays they are different but they can be converted in array for performing the basics/advance operations.
+                you can ge the tags by their ID with the help of the attribute:- getElemtnById and it is used as 
+                document.getElementById('<id-name>');
+                    and you can change the values by    using the same things with a different attributes named as:-
+                    document.getElemntById('<id-name').<operation'sname>= <task to perform>
+
+                        this is the basics inte=roduction of the DOM and it is just the starting of it to perform the good operations.
+                        
+            </HTML->
+        </Document->
+    </window-> -->
+    <!-- </p>
+</body>
+</html> INTRODUCTION TO DOM -->
+
+<!--
+ALL DOM selectors and Nodelist and HTML Collection:-
+-->
