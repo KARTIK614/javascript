@@ -13,8 +13,8 @@
 </head>
 <body class = "bg-black">
     <div>
-        <h1 id = "heading ">
-        DOM Manupulation predefiend functions:-
+        <h1 id = "title" class = "test heading" style = "background-color: green; padding: 15px; border-radius: 15px;">
+        DOM Manupulation predefiend functions:-<span style = "display: none;">text text</span>
         </h1>
         <p>
             # topics in the format of learning:-<br><br>
@@ -26,8 +26,22 @@
             example:-document.getElementById(heading).setAttribute('class','test')-> this will overwrite the classname with test.<br>
             4. styling via JS<br>
             example:- title.style.backgroundColor = 'green';<br>
-            5. you can apply almost each and every value using the JS which is required in frontend.<br>
-
+            5. you can apply almost each and every value using the JS which is required in frontend.<br><br><br>
+            -> getting the data from the webpage:-<br><br>
+            1. textContent:- get the content of the tag, it shows all the text present in the bar.<br>
+            example:-title.textContent<br>
+            2.innerText:-it only shows the text has to displayed on the screen, not the hidden one(for example:- you can hide the text in span tag giving its display: none;)<br>
+            example:-title.innerText<br>
+            3.innerHTML:-  in it if some kind of HTML is written down in it then you can get the whole value as well.<br>
+            example:-title.innerHTML<br><br>
+            # REAL WORLD QUERY SELECTORS:- <br><br>
+            1. document.querySelector('h1'):- you will get theh frost h1 from the queries in it.<br> 
+            examples:- document.querySelector('h1') -> gives you the first heading<br>
+            document.querySelector(#title) -> gives you the ID of the required syntax:-<br>
+            document.querySelector(.heading) ->gives you the class of the required syntax:-<br>
+            there are many query selectors are present in the market for the requred purposes you can learn them on the go, but some of them are as follows:-<br>
+            go through with querySelectorAll to get the most of the things in JS.<br>
+            in it the 
         </p>
     </div>
     
