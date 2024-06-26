@@ -12,11 +12,27 @@
        <div class="day">Tuesady</div>
        <div class="day">Wednesday</div>
        <div class="day">thrusday</div>
+       <p>
+        # PARENT PROPERTIES:-<br>
+        1. In JS the parent is used to access the parent tag of HTML to maupulate and it comes with various predefined properties in javascript.<br>
+        2. some of the properties are as follows:-<br><br>
+        firstElementChild<br>
+        lstElementChild<br><br>
+        to go to the parent from the child selector:-<br>
+        <!-- <variable>.parentElement -->
+            <!-- <variable>.nextElementSibling -->
+        <br>the space of the between the tags, comments are actually takes memory in the browser so to optimise the JS you have to be concious about the spacing in JS and all the properties comes under the nodelists in JS.<br>
+        now we are going to manupulate the values in HTML page using the JS and by JS you can apply styling on it as well.
+       </p>
     </div>
     
 </body>
 <script>
-    const parent = document.querySelector('.parent');
-    console.log(parent);
+    // const parent = document.querySelector('.parent');
+    // console.log(parent);
+    const div = document.createElement('h1')
+    console.log("div");//now you can apply the whole JS and CSS on this variable which is a part of the HTML page.
+    document.body.appendChild(div);//this will generate the new element from the memory to the actual webpage.
+
 </script>
 </html>
