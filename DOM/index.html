@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM_3</title>
-<style>
-    .bg_black{
-        background-color: purple;
-        color: white;
-    }
 
-</style>
 </head>
-<body class = "bg-black">
-    <div>
-        <h1>
-            heading1
-        </h1>
-        <p>
-
-        </p>
+<body style="background-color: black;
+        color: white;">
+    <div class= "parent">
+       <div class="day">Monday</div>
+       <div class="day">Tuesady</div>
+       <div class="day">Wednesday</div>
+       <div class="day">thrusday</div>
     </div>
     
 </body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+</script>
 </html>
