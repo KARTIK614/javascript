@@ -1,16 +1,32 @@
 const form = document.querySelector('form');
-form.addEventListener('submit', function(e));
-e.preventDefault()
-//if you write the given values upwards then the values of height and weight are assignd to empty because the event has not happened yet.
-const height = parseInt(document.querySelector('#height').value)
-const weight = parseInt(document.querySelector('#weight').value)
-const result = document.querySelector('#result')
-if(height<0 || isNaN(height)||height==='')
-{
-    result.innerHTML = `Please enter a valid height${height}`;
-}else if(weight<0 || isNaN(weight)||weight===''){
-       result.innerHTML = `Please enter a valid weight${weight}`;
-} else{
-    const bmi = ((weight /(height*height)/1000)).toFixed(2);
-    result.innerHTML = `<span>${bmi}</span>`
-}
+// this usecase will give you empty
+// const height = parseInt(document.querySelector('#height').value)
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+  const categeory = document.querySelector('#categeory');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = `Please give a valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    results.innerHTML = `<span>${bmi}</span>`;
+    if(bmi<18.6){
+        categeory.innerHTML = `<span>Your BMI is ${bmi} you are under weight</span>`
+    }
+    else if(bmi>18.6 && bmi<24.9){
+        categeory.innerHTML = `<span>Your BMI is ${bmi} you are a fir person</span>`
+    }
+    else{
+        categeory.innerHTML = `<span>Your BMI is ${bmi} you are over weight</span>`
+    }
+  }
+});
+

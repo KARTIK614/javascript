@@ -23,6 +23,12 @@
     margin-top: 20px;
     color: rgb(241, 241, 241);
   }
+  #categeory{
+    font-size: 20px;
+    margin-left: 75px;
+    margin-top: 20px;
+    color: rgb(241, 241, 241);
+  }
   
   button {
     width: 150px;
