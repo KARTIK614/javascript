@@ -1,0 +1,122 @@
+<!-- 
+All the events runs in a secquestial format in the browser, some of them are exceptions we will look into them.
+some of the worrk is deviated in asynchronous programming. it means that while the code runs it stops and perfrom some specific task first and then comes back on it initial phase.
+-> you can use events in the specefic tags itself but it is considered bad practices in developing the projects, because for the new user it is quite difficult to understand the code then, but in react the code is scalable where we can use the events like onclick on the buttons itself.
+-> for that you can create the JS file and make the events or write it down in the HTML itself.
+-> add event listners to the events to listen the events properly and provide a vast majority of features.
+->
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+ </head>
+ <body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+ </body>
+ <script>
+    // document.getElementById('owl').onclick = function(){alert("owl clicked")};//this approach is good but it will gives you less features and for sustainable development we have to use the event listners for it to make the good projects.
+   //  document.getElementById('owl').addEventListener('click', function(e){
+   //    alert("owl_image");
+   //  }, false)//here is false is written down here it is set as false as default, but in interviews sometimes the application dosen't work it you don'e write the false there.
+
+   //attachEvent:- this is used at the time of internet explorer when it is very hard to run an application on the browser it self.
+   //jQuery:-it is a JS library which used to handle and manipulate the DOM events and libraries in old times.
+   // in it .on is used to perform the manipulation works.
+   // document.getElementById('river').addEventListener('click', function(e){
+   //    console.log(e);
+   // }, false)//function returns an object named as event, the more you study it the easier the evet handling is going in JS.
+
+   //when you console.log the browser the events are mainly of browser and enviroment(i.e click position of mouse)
+   // some of the interview questions are :-
+   // 1. give me the time when the user click the image(this is asked in a react interview, but can be done by using only JS).\
+   // create an application where wherever the div is present in the HTML code a cricle is created there.
+   //THINGS TO REARD FROM THE EVENT OBJECT TO GET AN BETTER PRESPECTIVE.
+   // ->type(keyboard and mouse type events)
+   // timestamps:- how to change the date activities and the time which cxan be asked in the interviews.
+   // defalutPrevented:- to change the default behaiviour of the fucntion, tag, etc.
+   // for example:- stoping the submit button while filling the form.
+   //               in anchor tags, when a person click the link then you can stop the navigation of the person.
+   // target
+   // toElement
+   // srcElement
+   // currentTarget
+   // clientX, clientY, screenX, screenY(needed for interview prespective).
+   // to get the direct press of any key of the keyboard.
+   // for example:- altKey, ctrlKey, shiftKey, keyCode(a code assigned to each key of the keyboard, used in the making of the typing speed calculator).
+
+
+   //EVENT PROPOGATION:-it has 2 contexts event bubbling and event capturing.
+   // Mostly project use the event bubbling context that uses False.
+   //it is defined as when there are nested events are programmed in the scripts then the the execution of the events can be done in two manners they areknown as event bubbiling and event capturing.
+
+   // Event Bubbling:- in it when we clicked the inside event then it executes firstly then it will execute the outer event, it is hard to understand without an example so here is the example for you.
+
+   // document.getElementById('images').addEventListener('click', function(e){
+   //    console.log("UL clicked");
+   // }, false)
+      
+   // document.getElementById('river').addEventListener('click', function(e){
+   //    console.log("river_clickied");//it will executed firstly and then the UL clicked event will be execute becasue the river lies inside the images tag.
+   // }, false)
+
+   // Event Capturing:- in ti when we clicked the inner event then the event executes from top to bottom approach and it will used for different type of usecases.in it we have to type true at the place of false.
+   // for example:-
+   // document.getElementById('images').addEventListener('click', function(e){
+   //    console.log("UL clicked");
+   // }, true)
+      
+   // document.getElementById('river').addEventListener('click', function(e){
+   //    console.log("river_clickied");//it will executed lastly becasue the UL clicked event will be execute because of the event capturing.
+   // }, true)
+   
+
+   // to stop the event bubbling we can use a function named as stopPropogation(), after its execution the event will not bubbled and goto the upper event for execution.
+   // for example.
+   // document.getElementById('images').addEventListener('click', function(e){
+   //    console.log("UL clicked");
+   // }, false)
+      
+   // document.getElementById('river').addEventListener('click', function(e){
+   //    console.log("river_clickied");
+   //    e.stopPropagation();//this will stop the execution of the upper event.
+   // }, false)
+
+   //to prevent the default behaiviour of the click you can do this and perform some tasks whatever you want.
+   
+   // document.getElementById('google').addEventListener('click', function(e){
+   //    e.preventDefault();
+   //    console.log("google_clicked");
+   // }, false)
+
+   //PROJECT level tasks:-
+   // Q-> to remove the images whenever you click on the image:-
+   document.querySelector('#images').addEventListener('click', function(e){
+      // console.log(e.target.parentNode);
+      // let removeit = e.target.parentNode;
+      // removeit.remove();//this will remove the images from the webpage.
+      // removeit.parentNode.removeChild(removeit); this will also remove the image but it a lit tle blt complex so we are using the upper method to remove the images.
+       //BUT THERE IS A CATCH IT WILL REMOVE THE WHOLE IMAGES IF YOU CLICK ON THE OUTER AREA OF THE IMAGES BECAUSE:- it will get the parentNode as ul and remove all the things present inside the ul tag.
+      //  => to resolve this probleum we are using the removal specifically for the images which we can get by the e.target.tagName() predefined funciton of JS.
+
+      console.log(e.target.tagName);
+      if(e.target.tagName === 'IMG')
+      {
+         let removeit = e.target.parentNode;
+         removeit.remove();
+      }//this should be the optimum solution for the 
+   }, false)
+ </script>
+ </html> 

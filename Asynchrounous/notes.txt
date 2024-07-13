@@ -1,0 +1,50 @@
+# some of the things you have to remember while learning the JS its kind of mandatory.
+-> Js is a synchrounous language while learning it you have to understand that the execution of the code is done in top to bottom manner, in which the without the execution of the previous function or the code the execution of the next function ot pile of code is not done, because if the previous function given some of the things which is used in the just next function then the code get cracked code fat jayega.
+-> Aynchrounous work can be done in many languages like JAVA in which the task is done by breaking down it into some peices and assign each peice of code to different threads. after that compile them and execute them together.
+-> some of the things in JS can be done asynchrounouslly which we can understandin later notes.
+-> It is a single threaded language, means every thing is execute on a single thread, it doesn't mean that the JS is a slow language beacuse the JS engine is running on single thread but when we are using the JS, on each time it will be with a runtime enviroment like browser or node JS enviroment.
+-> so the JS is not working alone in any case of time.
+-> the synchrounous and single threaded is Default behaiviour of JS.
+
+=> Execution context:-defined previously.(execute one line of code at one time)
+->after the execution of the previous context the newer is executed other than that it will not executed.
+-> call stack:-defiend previously.
+->Memory heap:- defined previously.
+
+=> Blocking code v/s non blocking code
+blocking code:- it wil block the flow of the execution and the code will wait for the task complition to resume the code execution.
+-> this is happens becasue the preogram can't read the file by itself it wil give the context of the file to kernal, then the kernal goes and access the file, reads the matefial and after reading the execution is given to the program and the code's execution is resumes, But here is a catch, the kernal is not waiting for you he says that please stop for some time because i have some more important work to do other than just reading the file and put this task in a queue to be done and this process consumes the time here.
+-> JS dosen't have the power to read the file in the browser itself nodeJS  has the power to read the file itself.
+for example:- the execution of the code is stopped when the preogram needs to read a file because the file might be helpfull for the further execution of the code.
+
+non blocking code:- it will not block the flow of the execution of code and the task can be done asynchrounouslly this we will learn in the further leactures.
+-> this type of execution is based on the usecases of the code.
+for example:- you can't return the msg to the user of file uploaded of the file is not uploaded in the database by writing down the non blocking code.this is considered as very bad practice in programming.
+
+=> go for image to get a good understanding of the code.
+in the image:-
+-> there is a JS engine which is constructed by call stack and the memory heap.
+-> but the most of the execution have WEB APIs(in the browser)ORenviroment(node, deno){if you have the node enviroment then you don't have the access of the DOM of the browser.
+=> task queue:-this makes the JS more fast and asynchrounous 
+=> Promises(high priority queue):- this is a high priority queue with the JS Engine.
+-> enviroment and web API are two different things in JS.
+
+=> let's understand the Async by execution of a preogram:-
+1. call stack is created whenever the program executes.
+2. Global execution context is created and then functios are loaded and after the execution of the functions they are unloaded one by one by the principal of stack.
+3. when you want to make the asynchrounous nature of the code then you have to tell tell the code that do some specefic work and tell me after some time(can be a defiend amount of time), to perform these type of execution in JS we have web APIs and enviroments.
+examples of Async APIs:- setTimeOut(it is asked in the interviews), SetInterval, fetch()
+
+->use of asynchrounous APIs you have to call the settimeout through a function in JS which will perform its work without hurdling the code running in the Browser.
+so after the execution of the function through the async the function is out from the call stack then after the complitionof the work done by the async functions we have to return the value to the call stack back to do this we use a task queue(it adds the outputs of the function to the call stack by following the principal of LILO).
+
+=> TRICKY QUESTION:-
+suppose we are in call stack:-
+function 1
+setTimeOut(function2)
+function3
+is the function 2 is executed before the function 3 or after the function3?
+ANSWER:- theh function 2 is executed after the function3 because it is transfered to the API/enviroments asynchrounouslly, in the mean time the execution of function3 is done after that the function2 is returned by the task queue to the call stack for the usecase.
+
+=> SOME NEW API's are added to the JS listed below:-
+fetch():-it is also working on the principal of task queue, which is used for promises(high priority tasks)

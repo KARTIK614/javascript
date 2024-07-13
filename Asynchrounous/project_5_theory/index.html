@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT_5</title>
+</head>
+<body>
+    <h1>chai or code</h1>
+    <p>Theory in the notes.txt in the same folder</p>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const timeout = function(){
+        console.log("thandepapa");
+    }
+const changeMe = (timeout, 2000);//calling the function through a reference.
+
+const changeText = function(){
+    document.querySelector('h1').innerHTML="changed line"
+}
+setTimeout(changeText, 2000)//this will change the html of the browser after 2 seconds.
+// setTimeout(function(){console.log("thandepapa")}, 2000);// direct declaration of the timout function.
+
+//to stop the setTimeout function before its execution we can use the clearTimeout function after passing some arguments to it.
+// clearTimeout(timeout)// this is not feasible because if you run it directly then the meaning of setTimeout is not fullfulled.
+//to use the clearTimeout funciton we are using.
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe);
+    console.log("event stopped.");
+})
+
+
+</script>
+</html>

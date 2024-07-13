@@ -1,0 +1,15 @@
+to learn about the async JS you have to get a Command on some functions which is the main objective of this project.
+those function are given by the browser to you.
+
+=> setTimeout(Handler, 2000):-
+it runs the code present in the function after the given time in milliseconds.
+
+-> Handler:- it is just a call back function
+-> time is given in milliseconds in that function.
+-> you can give the referance of the function in the setTimeout function as well.
+-> you can stop the setTimeout function before its execution by the use of clearTimeout function.
+=>to see it in a practical way see the code.
+
+
+
+=> setInterval:- this is just as same as the setTimeout function.
