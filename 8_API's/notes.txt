@@ -1,0 +1,32 @@
+API's:-
+they are the talking languages between two systems weather they can be backend or frontend of ours and others aswell, two systems written in two different languages like java and javascript, backend and backend as well.
+
+API's can be taken very easily one of the most prominent API's are of github this can be taken by us in the script file.
+=> some of the things to know before in the world of APIs
+1. jsonformatter.org-> this web site used to formate the JSON cluttered data into a formated manner in it you have an option to format it in the    form of tree as well.
+-> you can get the information about the data present in the API, in it you get the information about the number or arrays and the objects present in the API and gives you an understanding of how to get the data from the APIs.
+-> to get an upperlevel analogy you get to know that the information present in the api called from the upper name or you have to go one layer deeper in the api to get the information.
+-> don't get demotivated if you have probleums to understand the structure of API's, it takes caare available.me from 1 day to 7 days if you are working on a big project and you don't have any other options to get the better understanding of the API's.
+
+2. randomeuser.me-> gives you free api to practice on it.
+
+3. you have to send the resposes and get the information to get the better underatanding of the api.
+let's Deep down in the APIs.
+
+=> first of all we have to get a underatanding of the the conventional way of dealing with the APIs without diving into the fetch or the promises that comes in some previous years.
+
+->XMLHTTPREQUEST:- this is used in the legacy code for the data gathering and posting.
+this is maily the AJAX(asynchrounous javascript and XML) programming which is used previously.the person who knows the AJAX has a good hand in asynchrounous programming.
+In it for each step you have 5 state to perfom the task which is as follows:-
+1. UNSENT:- client has created, open() not called yet.
+2. OPENED:- openhas been called.
+3. HEADERS_RECEIVED:- send() has been called, and headers and status are available.
+4. loading:- Downloading responsetext holds partial data.
+5. DONE:- the operation is complete.
+
+lets deep down in the code for better underatanding:-
+=> the response comes from the url is always comes in string format.
+
+
+
+

@@ -1,0 +1,11 @@
+PROMISES:- it is an object represents the eventual complition or failure of an asynchronous operation and its resulting value.
+in some cases we require time for the complition for example:- data fetching from the database, if you want to perform some calculation on data, cryptography(encryption, decryption).
+if you want to wait till the complition of the project you can apply async await to the code that stops the execution of the code until its execution is done, those things are way more uesful in mobile development as well for example you have to turn on the camera or the sound of the mobile then you can use them
+
+=> Promises also has three states for its complition:-
+1. pending:- initial state neither fullfilled, nor rejected.
+2. fullfulled:- the operation was complited successfully.
+3. rejected:- the operation has failed.
+
+# CREATION OF PROMISES:-
+-> you have to create an object to access the functionalities of promises.
