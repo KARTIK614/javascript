@@ -1,0 +1,34 @@
+refer some of the links to get a better understanding about fetch
+
+
+blog.logrocket.com/fetch-api-node-js/   ->\this link will give you a good blog on fetch API to get a better understanding of logrocket.
+-> the work of logrocket is production based login but they are good in writing blogs also sometimes.
+
+
+=> INTERVIEW QUESTION:-
+if you get error 404 in a promise then in which part you will get the error either it is response or reject
+ANS-> you will get that error in response becasue the the reject only works when the request is not sent by the browser itself.
+
+=> you can send many type of data with the fetch using this simple syntax
+
+fetch("<link>,{
+    cache: 'only-if-cached',
+    mode: 'no-cors',
+});//this is the example of data sharing through fetch it is capable of many things which you can learn by going to mdn.
+
+the default name of the fetch queue used to pass the tasks assigned asynchrounously  again to the call stack is 'microtask queue'
+
+
+
+WORK OF FETCH:
+1. data reservation in variable in memory:- this reserves a space in memory for data they two arrays named as onFulFilled[](response of the promise function) and onRejection[](reject of the promise function),They are private fields and you can't access those arrays because they are not present in your range.
+
+it works in two types of enviroment
+2. web browser/native node(node's enviroment):- this will send a network request either your browser or your node enviroment sends those things for you,if the request complites its path in the network then the response is coming from it other wise reject is coming from it.
+
+THINFS TO REMEMBER IN IT:-That thing to remember is when you send a response to network then if the network returns error 404 means page node found then the output of that error goes in onfulfilled not in onrejection because it is a output from the network not that you did not connect to the network the onrejection would reject part of the promise function is applicable only and only if you didn't connect to the network if you connect it to the network and then network sends you whether 404 and any other kind of error that then it resides in response or on fulfilled array.
+
+=> those functions are responsible in the fullfilling of data and it is the responsibility of data to fulfill the call stack with information.
+
+=>Here are some concepts regarding oops they are as follows:-
+The thing is that oops is kind of similar to C so I don't have to learn it again in Javascript series and if I want to get reference from the oops then I will get it on the get up repository of chai aur code in Hindi.
