@@ -16,7 +16,7 @@ async function fetchWeatherData() {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '86b9327245msh81f9f8fd64566c4p1fb779jsnd3d1df22e6f0',
+            'x-rapidapi-key': 'API_KEY_FROM_RAPIDAPI',
             'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
         }
     };
